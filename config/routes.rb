@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  [:songs,:artists,:generes].each do |model|
+  [:songs,:artists,:genres].each do |model|
     resources model, only: [:index,:show,:new,:create,:edit,:update]
   end
   
