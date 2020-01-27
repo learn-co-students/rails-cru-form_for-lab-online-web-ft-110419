@@ -1,0 +1,9 @@
+<h1> Edit an Artist </h1>
+
+<%= form_for @artist do |form| %>
+	<p><%= form.label :name, "Name of Artist:" %>
+	<%= form.text_field :name, value: "#{@artist.name}" %></p>
+	<p><%=form.label :bio, "Bio of Artist:"%>
+		<%= form.text_area :bio %></p>
+	<p><%= form.submit "Update Artist" %></p>
+<% end %>
