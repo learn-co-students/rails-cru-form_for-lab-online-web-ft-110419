@@ -1,0 +1,13 @@
+<h1>Create a New Song</h1>
+
+<%= form_for @song do |form| %>
+	<p><%= form.label :name, "Name of Song:" %>
+	<%= form.text_field :name %></p>
+	<p><%= form.label :artist, "Artist of Song:" %>
+		<%= form.text_field :artist_id %>
+<!-- 	<%= form.collection_select :artist_id, Artist.all, :id, :name, :prompt =>"Select" %></p> -->
+	<p><%= form.label :genre, "Genre of Song:" %>
+		<%= form.text_field :genre_id %>
+<!-- 		<%= form.collection_select :genre_id, Genre.all, :id, :name, :prompt => "Select" %></p> -->
+	<p><%= form.submit "Create Song" %></p>
+<% end %>
